@@ -14,12 +14,13 @@
 header {
     position: sticky; 
     z-index: 100;
+    background-color: transparent; 
 }
 
 #burger {
     width: 40px; 
     height: 40px; 
-    background-color: white; 
+    /* background-color: white;  */
     display: inline-flex; 
     flex-direction: column;
     justify-content: space-around;
@@ -98,9 +99,6 @@ nav ul li a:hover {
     color: var(--red);
 }
 
-main {
-    text-align: right; 
-}
 
 .nav-link {
     position: relative;
@@ -123,4 +121,30 @@ main {
 
 .nav-link:nth-of-type(3) { 
     transition: left 1s ease-out, opacity 1.2s ease-out;
+}
+
+main {
+    text-align: center; 
+    width: 100%; 
+    height: 100vh; 
+    background-image: url('https://images.pexels.com/photos/2960172/pexels-photo-2960172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    margin-top: -50px; 
+}
+
+main .welcome-section {
+    position: relative; 
+    top: 7rem;  
+}
+
+.welcome-section h1 {
+    display: inline-block; 
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--dblue);
+}
+
+.welcome-section p {
+    margin-top: 1rem;
 }
