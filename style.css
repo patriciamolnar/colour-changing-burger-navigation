@@ -41,7 +41,6 @@ header {
     bottom: 0;
     height: 100%; 
     width: 100%; 
-    /* background-color: magenta; */
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);  
     transform: scale(0, 1);
     transform-origin: left;
@@ -60,8 +59,12 @@ header {
     background-color:var(--red); 
 }
 
-#burger:hover .burger-line::after {
+#burger:hover .burger-line::after, #burger:focus .burger-line::after {
     transform: scale(1, 1.5);
+}
+
+#burger:focus {
+    outline: none; 
 }
 
 header span {
@@ -95,8 +98,9 @@ nav ul li a {
     color: var(--dblue); 
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a:focus {
     color: var(--red);
+    outline: none; 
 }
 
 
