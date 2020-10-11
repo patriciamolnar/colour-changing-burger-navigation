@@ -29,7 +29,7 @@ function setup() {
     }); 
 
     const lastLink = navLinks[navLinks.length-1];
-    lastLink.addEventListener('keyup', function(e) {
+    lastLink.addEventListener('keydown', function(e) {
         if (e.key === "Tab") {
              showHideNav(); 
         }
