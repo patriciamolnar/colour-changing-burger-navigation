@@ -2,9 +2,9 @@ window.addEventListener('DOMContentLoaded', setup);
 
 function setup() {
 
+    const navLinks = document.querySelectorAll('.nav-link'); 
 
     function showHideNav() {
-        const navLinks = document.querySelectorAll('.nav-link'); 
                 
         navLinks.forEach(navLink => {
            const opacity = window.getComputedStyle(navLink).getPropertyValue("opacity");  
@@ -21,6 +21,17 @@ function setup() {
     const burger = document.getElementById('burger'); 
     burger.addEventListener('click', showHideNav, false); 
 
+    /* Opening and closing nav when tabbing */
+    burger.addEventListener('keyup', function(e) {
+        if (e.key === "Tab") {
+             showHideNav(); 
+        }
+    }); 
 
-
+    const lastLink = navLinks[navLinks.length-1];
+    lastLink.addEventListener('keyup', function(e) {
+        if (e.key === "Tab") {
+             showHideNav(); 
+        }
+    }); 
 }
