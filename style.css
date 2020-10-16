@@ -1,8 +1,10 @@
 :root {
     --blue: #78B1E0; 
+    --rgba-blue: rgba(120, 177, 224, .3);
     --dblue: #597B98; 
-    --lblue: #D2F5FF; 
+    --rgba-dblue: rgba(144, 195, 240, 0.3);
     --red: #FF0C3A; 
+    --rgba-red: rgba(255, 12, 58, .3); 
 }
 
 * {
@@ -40,26 +42,28 @@ header {
     left: 0;
     bottom: 0;
     height: 100%; 
-    width: 100%; 
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);  
+    width: 100%;   
     transform: scale(0, 1);
     transform-origin: left;
     transition: transform 0.5s ease-in; 
 }
 
 .burger-line:nth-of-type(1)::after {
-    background-color: var(--blue); 
+    background-color: var(--blue);
+    box-shadow: 0 0 3px var(--rgba-blue); 
 }
 
 .burger-line:nth-of-type(2)::after {
     background-color:var(--dblue); 
+    box-shadow: 0 0 3px var(--rgba-dblue);
 }
 
 .burger-line:nth-of-type(3)::after {
     background-color:var(--red); 
+    box-shadow: 0 0 3px var(--rgba-red);
 }
 
-#burger:hover .burger-line::after, #burger:focus .burger-line::after {
+#burger:hover .burger-line::after {
     transform: scale(1, 1.5);
 }
 
@@ -147,8 +151,10 @@ main .welcome-section {
     display: inline-block; 
     padding-bottom: 5px;
     border-bottom: 2px solid var(--dblue);
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
 .welcome-section p {
     margin-top: 1rem;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
 }
